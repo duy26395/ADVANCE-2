@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.mypc.fb_mvvm.Main.Friend.Listfriend_viewmodel"/>
+    </data>
+<RelativeLayout
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/idbaner"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Danh Sach"
+            android:textSize="30dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/idshow"
+            android:layout_width="wrap_content"
+            android:onClick="@{viewModel::onBtnReloadClick}"
+            android:layout_height="wrap_content"
+            android:text="Show"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:layout_below="@+id/idbaner"
+        android:layout_margin="20dp"
+        android:id="@+id/idrc"
+        tools:layout_editor_absoluteY="8dp"
+        app:addrecycle="@{viewModel.adapter}"
+        tools:layout_editor_absoluteX="8dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
+</layout>

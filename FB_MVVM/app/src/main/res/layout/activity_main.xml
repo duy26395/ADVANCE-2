@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.mypc.fb_mvvm.Main.MainViewModel"/>
+        </data>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mypc.fb_mvvm.Main.MainActivity">
+    <com.facebook.login.widget.LoginButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_lgbtn"
+        android:onClick="@{viewModel::LoginButtonClicked}"
+        android:gravity="center"
+        tools:layout_editor_absoluteY="242dp"
+        tools:layout_editor_absoluteX="103dp"
+        tools:ignore="MissingConstraints" />
+
+</android.support.constraint.ConstraintLayout>
+</layout>
